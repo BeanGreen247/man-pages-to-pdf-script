@@ -15,7 +15,6 @@ filename="manpagelist.csv"
 while IFS=""; read -r manpagename; do
 	man -t $manpagename|ps2pdf - $manpagename.pdf
 done < $filename
-cd
 
 # We let the user know where the PDFs were saved
 echo "Done... PDFs locaded in $pwd"
